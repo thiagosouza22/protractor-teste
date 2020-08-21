@@ -1,6 +1,6 @@
 'use strict'
 const Data = require('./environments_parameters.json');
-const Reporter = require("/protractor-teste/quality_assurance/features/support/reporter");
+const Reporter = require('../protractor-teste/support/reporter');
 
 const TEST_ENV = process.env.TEST_ENV || 'local'
 let environmentParameters
@@ -52,7 +52,7 @@ exports.config = {
     cucumberOpts: {
         strict: true,
         format: 'json:results.json',
-        require: '../features/step_definitions/*.js',
+        require: '../protractor-teste/step_definitions/*.js',
         tags: [''],
     },
 
